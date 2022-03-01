@@ -1,0 +1,137 @@
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.app{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header{
+  width: 100vw;
+  height: 6vh;
+  background-color: rgb(226, 66, 66);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+ color: rgb(243, 243, 243);
+ letter-spacing: 2px;
+}
+.map{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.location-icon{
+  font-size: 2.5rem;
+  color: rgb(197, 14, 14);
+}
+
+/* loading animation */
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  
+  display: flex;
+}
+ul li{
+  font-size: 80px;
+  letter-spacing: 20px;
+  animation: myani 3s linear infinite;
+}
+@keyframes myani {
+  0%{
+      color: red;
+      transform: translateX(-60px);
+      opacity: 0;
+  }
+  10%{
+      opacity: 1;
+  }
+  50%{
+      letter-spacing: -20px;
+      opacity: 1;
+  }
+  100%{
+      color: blue;
+      transform: translateX(60px);
+      opacity: 0;
+  }
+  
+}
+ul li:nth-child(1){
+  animation-delay: 0s;
+}
+ul li:nth-child(2){
+  animation-delay: 0.2s;
+}
+ul li:nth-child(3){
+  animation-delay: 0.4s;
+}
+ul li:nth-child(4){
+  animation-delay: 0.8s;
+}
+ul li:nth-child(5){
+  animation-delay: 1s;
+}
+ul li:nth-child(6){
+  animation-delay: 1.2s;
+}
+ul li:nth-child(7){
+  animation-delay: 1.4s;
+}
+
+/* location-card */
+.location-card{
+  max-width: 400px;
+  max-height: 600px;
+  position: absolute;
+  top: 6vh;
+  right: 30px;
+  background-color: rgba(17, 17, 17, 0.438);
+  box-shadow: 2px 3px 3px rgba(255,255,255,0.2),
+              -2px -3px 3px rgba(255,255,255,0.2);
+  padding: 10px;
+  color: rgb(187, 187, 187);
+  border-radius: 10px;
+  z-index: 11;
+
+}
+
+.btn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.times{
+  font-size: 2rem;
+  padding: 0;
+  border-radius: 50%;
+  color: rgb(255, 74, 74);
+  background-color: wheat;
+}
